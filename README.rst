@@ -3,6 +3,8 @@ Created by `Stephen McDonald <http://twitter.com/stephen_mcd>`_
 Introduction
 ============
 
+NOTE: This is a fork of the original `django-email-extras <https://github.com/stephenmcd/django-email-extras.git>`_ by `Stephen McDonald <http://twitter.com/stephen_mcd>`_. This fork was created in order to keep the code up to date with main Django versions. Till the time of this note the original code seems not to support Django >= 4.0. Please consult the original repo to check if this is stil the case!
+
 django-email-extras is a Django reusable app providing the
 ability to send PGP encrypted and multipart emails using
 Django templates. These features can be used together or
