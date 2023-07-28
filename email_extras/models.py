@@ -1,7 +1,7 @@
 
 from __future__ import unicode_literals
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from email_extras.settings import USE_GNUPG, GNUPG_HOME
 from email_extras.utils import addresses_for_key
@@ -61,8 +61,8 @@ if USE_GNUPG:
 
         address = models.EmailField(blank=True)
         key = models.ForeignKey(
-            'email_extras.Key', 
-            null=True, 
+            'email_extras.Key',
+            null=True,
             editable=False,
             on_delete=models.CASCADE
         )

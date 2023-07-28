@@ -4,7 +4,7 @@ from warnings import warn
 
 from django.template import loader
 from django.core.mail import EmailMultiAlternatives, get_connection
-from django.utils.encoding import smart_text
+from django.utils.encoding import smart_str
 import six
 
 from email_extras.settings import (USE_GNUPG, GNUPG_HOME, ALWAYS_TRUST,
@@ -85,7 +85,7 @@ def send_mail(subject, body_text, addr_from, recipient_list,
             if encrypted == "" and body != "":  # encryption failed
                 raise EncryptionFailedError("Encrypting mail to %s failed.",
                                             addr_list[0])
-            return smart_text(encrypted)
+            return smart_str(encrypted)
         return body
 
     # Load attachments and create name/data tuples.
